@@ -12,3 +12,4 @@
 - componente listas
 - componente detalhe
 - editar detalhe
+- rotas
