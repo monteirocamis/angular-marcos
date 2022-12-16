@@ -1,25 +1,6 @@
 
-<div class="">
-  <div>
-
-    <h1> {{ title}}</h1>
-    <div class="">
-      <input type="text" placeholder="adicionar tarefa" name="tarefa" #nomeTarefa>
-
-      <span (click)="adicionarTarefa(nomeTarefa.value);">
-         <i> add </i>
-        </span>
-    </div>
-  </div>
-</div>
-
-
-<div class="">
-  <ul>
-    <li  *ngFor=" let tarefaItem of tarefasArray">
-      {{ tarefaItem }}
-    </li>
-    <li>item</li>
-  </ul>
-</div>
-<router-outlet></router-outlet>
+  <!-- cabeçalho -->
+  <!-- <h1>cabeçalho</h1> -->
+  <router-outlet></router-outlet>
+<!-- <h3>rodape</h3> -->
+  <!-- rodape -->
