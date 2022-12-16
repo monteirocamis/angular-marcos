@@ -13,6 +13,7 @@
 
 
 - estilização
+- animação
 - componente listas
 - componente detalhe
 - editar detalhe
