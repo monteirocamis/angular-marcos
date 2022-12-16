@@ -1,0 +1,36 @@
+
+  <div>
+    <form class="form" action="" #formTarefa="ngForm" (submit)="submitFormTarefa(formTarefa.value); formTarefa.resetForm(); ">
+      <div class="">
+
+        <div class="form-group">
+          <h1 class="text-center"> {{ title }} </h1>
+          <div class="input-group-prepend">
+            <input type="text" placeholder="adicionar tarefa" name="tarefa" #tarefa
+            [(ngModel)]="tarefaNomeModel" class="form-control" >
+
+
+            <span (click)="adicionarTarefa(tarefa.value);" class="input-group-text">
+            <i class="material-icons">add_circle</i>
+            </span>
+          </div>
+        </div>
+        </div>
+
+
+        <div class="data">
+          <ul class="list-unstyled">
+            <li [@moveInLeft] *ngFor=" let itemArray of listaTarefaTipada">
+            {{ itemArray.nome }}
+            <i  class="material-icons" (click)="editarTarefa(itemArray.id)">
+            edit
+            </i>
+            <i  class="material-icons" (click)="removerTarefa(itemArray.id)">
+            delete
+            </i>
+            </li>
+
+          </ul>
+      </div>
+    </form>
+  </div>
