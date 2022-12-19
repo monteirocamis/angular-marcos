@@ -1,5 +1,5 @@
 import { ITarefaDto } from './../interfaces/ITarefaDto';
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,8 +7,18 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './tarefas-detalhe.component.html',
   styleUrls: ['./tarefas-detalhe.component.css']
 })
-export class TarefasDetalheComponent {
-  tarefaDto: ITarefaDto = { id: 0 , nome: ''};
+export class TarefasDetalheComponent implements OnInit{
+
+  ngOnInit(): void {
+   // throw new Error('method not implemented')
+  }
+  @Input()  tarefaParaDetalhar!: ITarefaDto;
+  @Input() public finalizarVisualizacao!:()=>void;
+  // tarefaDto: ITarefaDto = { id: 0 , nome: ''};
+
+  fecharVisualizacao(){
+    this.finalizarVisualizacao();
+  }
 
   AtualizarTarefa(){
     this.router.navigate(['lista']);

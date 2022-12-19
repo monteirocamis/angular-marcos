@@ -1,5 +1,6 @@
 
-  <div>
+  <div *ngIf="telaParaApresentar=='lista'">
+
     <form class="form" action="" #formTarefa="ngForm" (submit)="submitFormTarefa(formTarefa.value); formTarefa.resetForm(); ">
       <div class="">
 
@@ -28,9 +29,18 @@
             <i  class="material-icons" (click)="removerTarefa(itemArray.id)">
             delete
             </i>
+            <i  class="material-icons" (click)="detalharTarefa(itemArray.id)">
+              visibility
+              </i>
             </li>
 
           </ul>
       </div>
     </form>
   </div>
+
+
+<!-- <app-tarefas-detalhe [tarefaParaDetalhar]="tarefaSelecionada"></app-tarefas-detalhe> -->
+
+<app-tarefas-detalhe  *ngIf="telaParaApresentar=='detalhe'" [tarefaParaDetalhar]="tarefaSelecionada"
+[finalizarVisualizacao]="fecharDetalhes"></app-tarefas-detalhe>

@@ -22,7 +22,9 @@
 
 ## aula dia 15 
 
--
+- detalhes tarefa
+- botao de fechar detalhes 
+- 
 
 
 ## aula dia 16 

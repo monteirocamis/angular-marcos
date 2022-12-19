@@ -1,7 +1,12 @@
-<h1> detalhe da tarefa {{ tarefaDto.nome}}</h1>
+<div>
+  <h2>
 
-<div class="" *ngIf="tarefaDto">
+    detalhe da tarefa
+  </h2>
+  <h3 *ngIf="tarefaParaDetalhar"
+  >
+  {{ tarefaParaDetalhar.nome }}
+  </h3>
 
-    <input type="text" class="" placeholder="nome da tarefa" [(ngModel)]="tarefaDto.nome">
-    <i class="material-icons" (click)="AtualizarTarefa();"    >check</i>
+  <button (click)="fecharVisualizacao()">X</button>
 </div>

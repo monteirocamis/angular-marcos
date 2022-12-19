@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TarefasDetalheComponent } from './tarefas-detalhe/tarefas-detalhe.component';
 import { TarefasListaComponent } from './tarefas-lista/tarefas-lista.component';
+import { TarefaEditarComponent } from './tarefa-editar/tarefa-editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarefasDetalheComponent,
-    TarefasListaComponent
+    TarefasListaComponent,
+    TarefaEditarComponent
   ],
   imports: [
     BrowserModule,
