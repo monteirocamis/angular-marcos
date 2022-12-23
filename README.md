@@ -22,7 +22,7 @@
 
 ## aula dia 15 
 
--
+- localstorage
 
 
 ## aula dia 16 
